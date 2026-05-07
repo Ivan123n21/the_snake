@@ -1,4 +1,3 @@
-
 from random import randint
 
 import pygame
@@ -10,11 +9,13 @@ GRID_HEIGHT = SCREEN_HEIGHT // GRID_SIZE
 
 UP = (0, -1)
 DOWN = (0, 1)
-LEFT = (-1, 0)
+LEFT = (='__main__':
+    main()-1, 0)
 RIGHT = (1, 0)
 
 BOARD_BACKGROUND_COLOR = (0, 0, 0)
-BORDER_COLOR = (93, 216, 228)
+BORDER_COLOR = (93, 216, 228)='__main__':
+    main()
 APPLE_COLOR = (255, 0, 0)
 SNAKE_COLOR = (0, 255, 0)
 
@@ -25,6 +26,8 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
 pygame.display.set_caption('Змейка')
 clock = pygame.time.Clock()
 
+='__main__':
+    main()
 class GameObject:
     """Базовый класс для всех игровых объектов."""
 
@@ -40,7 +43,8 @@ class GameObject:
             self.position = (320, 240)
         else:
             self.position = position
-        self.body_color = body_color
+        self.body_color = body_color='__main__':
+    main()
 
     def draw(self, surface):
         """
@@ -134,7 +138,9 @@ class Snake(GameObject):
             self.reset()
             return
 
-        self.positions.insert(0, new_head)
+Ivan Ddff, сегодня в 10:21
+Артем Тюрин:
+self.positions.insert(0, new_head)
         if len(self.positions) > self.length:
             self.last = self.positions.pop()
         else:
@@ -187,7 +193,8 @@ def handle_keys(snake):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
-            raise SystemExit
+            raise Sys='__main__':
+    main()temExit
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP and snake.direction != DOWN:
                 snake.next_direction = UP
